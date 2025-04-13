@@ -1,0 +1,216 @@
+// BEM方式で命名
+
+@charset "UTF-8";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 100%;
+}
+body {
+  font-family: "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.7;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+
+.magazine,
+.catalog-antique__flex-items,
+.footer__flex-items {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+.magazine__title,
+.fashion__title,
+.catalog-antique__title,
+.footer__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+// ボタン
+.btn {
+  color: #2a2a2a;
+  border: solid 1px #2a2a2a;
+  display: inline-block;
+  font-size:  12px;
+  padding: 15px 40px;
+  margin-top: 30px;
+}
+
+// ヘッダー
+.header {
+  height: 100vh;
+  background-image: url(https://placehold.jp/1920x1280.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  margin-bottom: 80px;
+  position: relative;
+}
+.site-title {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+// Magazine
+
+.magazine {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.magazine__flex-items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.magazine__item {
+  width: 49%;
+  position: relative;
+}
+.magazine__item-text {
+  max-width: 290px;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px 0;
+  margin: 0 auto;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+}
+.magazine__item-title {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+
+// Fashion
+
+.fashion {
+  height: 520px;
+  background-image: url(https://placehold.jp/700x90.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 60px;
+  margin-bottom: 80px;
+}
+
+// Catalog & Antique
+
+.catalog-antique {
+  background-color: #f5f5f5;
+  padding: 60px 0;
+}
+.catalog-antique__flex-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.catalog-antique__item {
+  width: 50%;
+  text-align: center;
+}
+.catalog-antique__item img {
+  width: 100%;
+}
+.catalog-antique__item p {
+  margin-bottom: 30px;
+  text-align: left;
+}
+.catalog-antique__item p:last-child {
+  margin-bottom: 0;
+}
+
+// フッター
+
+.footer {
+  background-color: #333;
+  font-size: 12px;
+}
+.footer__flex-items {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.footer__item {
+  width: 33%;
+  line-height: 2;
+}
+.footer__item:first-child {
+  padding: 60px 0;
+}
+.footer__item li::before {
+  content: "-";
+  margin-right: 5px;
+}
+.footer__copyright {
+  background-color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+
+// SP
+
+@media screen and (max-width: 896px) {
+  .magazine__flex-items {
+    flex-direction: column;
+  }
+  .magazine__item {
+    width: 100%;
+  }
+  .magazine__item:first-child {
+    margin-bottom: 30px;
+  }
+
+  .fashion {
+    padding-top: 35px;
+    margin-bottom: 50px;
+  }
+
+  .catalog-antique {
+    padding: 30px 0;
+  }
+  .catalog-antique__flex-items {
+    flex-direction: column;
+  }
+  .catalog-antique__item {
+    width: 100%;
+  }
+  .catalog-antique__item:first-child {
+    margin-bottom: 60px;
+  }
+
+  .footer__flex-items {
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .footer__item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .footer__item:first-child {
+    text-align: center;
+    padding: 0;
+  }
+}
